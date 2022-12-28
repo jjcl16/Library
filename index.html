@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My library</title>
+    <script src="./library.js" defer></script>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="body">
+      <div class="pageTitle">
+        <h1>My Library</h1>
+      </div>
+      <div class="form">
+        <div class="formTitle">Add a new book</div>
+        <form action="javascript:void(0);">
+          <div class="addBookFormContainer">
+            
+
+            <div class="addBookFormItem">
+              <label for="title">Title:</label>
+              <input
+                type="text"
+                name="title"
+                id="title"
+                minlength="1"
+                required
+                pattern=".*\S+.*"
+                title="This field is required"
+              />
+            </div>
+            <div class="addBookFormItem">
+              <label for="author">Author:</label>
+              <input
+                type="text"
+                name="author"
+                id="author"
+                minlength="1"
+                required
+                pattern=".*\S+.*"
+                title="This field is required"
+              />
+            </div>
+            <div class="addBookFormItem">
+              <label for="pages">pages:</label>
+              <input
+                type="number"
+                name="pages"
+                id="pages"
+                minlength="1"
+                required
+                pattern=".*\S+.*"
+                title="This field is required"
+              />
+            </div>
+            <div class="addBookFormItem">
+              <label for="readed">Readed?</label>
+              <input type="checkbox" name="readed" id="readed" />
+            </div>
+            <div class="addBookFormItemButton">
+              <button type="submit" id="addBook">+ Book</button>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div class="showBooksContainer">
+        <button id="showBooks">Show books</button>
+      </div>
+      <div class="clearScreenContainer">
+        <button id="clearScreen">Clear Screen</button>
+      </div>
+
+      <div id="bookList"></div>
+    </div>
+  </body>
+</html>
