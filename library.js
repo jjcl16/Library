@@ -6,20 +6,26 @@ const bookList = document.querySelector('#bookList');
 const myLibrary = [];
 
 /* Book Constructor */
-function Book(title, author, pages, readed) {
-  this.title = title;
-  this.author = author;
-  this.pages = pages;
-  this.readed = readed;
+class Book {
+  constructor(title, author, pages, readed) {
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+    this.readed = readed;
+  }
+
+  info() {
+    return !this.readed ? `${this.title} by ${this.author}, ${this.pages} pages, not read yet.` : `${this.title} by ${this.author}, ${this.pages} pages, readed.`;
+  }
 }
-/* get info from a book */
+/* get info from a book 
 Book.prototype.info = function () {
   return !this.readed
     ? `${this.title} by ${this.author}, ${this.pages} pages, not read yet.`
     : `${this.title} by ${this.author}, ${this.pages} pages, readed.`;
 };
-
-Book.prototype.checkBookOnLibary = function () {};
+*/
+// Book.prototype.checkBookOnLibary = function () {};
 
 /* create a div for each book */
 function listBooks() {
